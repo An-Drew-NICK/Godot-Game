@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://byprbmsurgln6"]
 
-[ext_resource type="Script" path="res://Script/CharacterBody2D.gd" id="1_7s6fw"]
 [ext_resource type="Texture2D" uid="uid://cfxqdxkay3sab" path="res://Aset/Player/Player1.png" id="1_51tig"]
+[ext_resource type="Script" path="res://Script/Run2D.gd" id="1_qfvd5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ua0o"]
 animations = [{
@@ -21,7 +21,7 @@ height = 56.0
 [node name="Player" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_7s6fw")
+script = ExtResource("1_qfvd5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 position = Vector2(250, 250)
