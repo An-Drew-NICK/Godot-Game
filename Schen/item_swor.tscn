@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpppqbmn580o8"]
+
+[ext_resource type="Texture2D" uid="uid://hrtwvuf3pvhu" path="res://Aset/Tilemap/Мечь.png" id="2_wd3f6"]
+
+[node name="Item swor" type="Node2D"]
+position = Vector2(183, 277)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-87.25, -245.75)
+scale = Vector2(2.34375, 2.34375)
+texture = ExtResource("2_wd3f6")

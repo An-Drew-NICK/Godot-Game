@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bwht5oupkcjw0"]
+[gd_scene load_steps=9 format=3 uid="uid://bwht5oupkcjw0"]
 
 [ext_resource type="Texture2D" uid="uid://bn3s4mw04q7c8" path="res://Aset/Tilemap/Sprite-0002.png" id="1_4qkq5"]
 [ext_resource type="Texture2D" uid="uid://dc15l32sxwket" path="res://Aset/Tilemap/Map.png" id="2_72c11"]
 [ext_resource type="PackedScene" uid="uid://byprbmsurgln6" path="res://Schen/player.tscn" id="2_yuqjj"]
+[ext_resource type="Script" path="res://Script/Run2D.gd" id="3_n03h7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t3ilk"]
 texture = ExtResource("1_4qkq5")
@@ -139,6 +140,7 @@ layer_0/tile_data = PackedInt32Array(65537, 131073, 0, 131073, 131073, 1, 196609
 
 [node name="Player" parent="." instance=ExtResource("2_yuqjj")]
 position = Vector2(286, 68)
+script = ExtResource("3_n03h7")
 
 [node name="TileMap2" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_h2xmk")
