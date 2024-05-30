@@ -1,34 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://byprbmsurgln6"]
+[gd_scene load_steps=6 format=3 uid="uid://byprbmsurgln6"]
 
-[ext_resource type="Texture2D" uid="uid://cfxqdxkay3sab" path="res://Aset/Player/Player1.png" id="1_51tig"]
 [ext_resource type="Script" path="res://Script/Run2D.gd" id="1_qfvd5"]
+[ext_resource type="Texture2D" uid="uid://c88jcavtc562u" path="res://Aset/Player/Map.png" id="2_bwtev"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_3ua0o"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6op6h"]
+atlas = ExtResource("2_bwtev")
+region = Rect2(143, 47, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aciaa"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_51tig")
+"texture": SubResource("AtlasTexture_6op6h")
 }],
 "loop": true,
-"name": &"Run",
+"name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b52oc"]
-radius = 15.0
-height = 56.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7dkd"]
+size = Vector2(53, 53)
 
-[node name="Player" type="Node2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D"]
+floor_snap_length = 0.0
 script = ExtResource("1_qfvd5")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(250, 250)
-scale = Vector2(4.90625, 4.90625)
-sprite_frames = SubResource("SpriteFrames_3ua0o")
-animation = &"Run"
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(233.5, 93.5)
+scale = Vector2(3.3125, 3.3125)
+sprite_frames = SubResource("SpriteFrames_aciaa")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(206, 218)
-shape = SubResource("CapsuleShape2D_b52oc")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(233.5, 93.5)
+shape = SubResource("RectangleShape2D_h7dkd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(227, 105)
+offset = Vector2(1, 1)
+zoom = Vector2(2, 2)
